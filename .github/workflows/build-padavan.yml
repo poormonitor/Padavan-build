@@ -46,14 +46,7 @@ jobs:
         exit 1
         fi
         cp -f configs/templates/$TNAME.config .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_SOCAT=y/CONFIG_FIRMWARE_INCLUDE_SOCAT=n/g' .config
         sed -i 's/#CONFIG_FIRMWARE_CPU_900MHZ=y/CONFIG_FIRMWARE_CPU_900MHZ=y/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_SMBD36=y/CONFIG_FIRMWARE_INCLUDE_SMBD36=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENVPN=y/CONFIG_FIRMWARE_INCLUDE_OPENVPN=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=y/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_SRELAY=y/CONFIG_FIRMWARE_INCLUDE_SRELAY=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_NAPT66=y/CONFIG_FIRMWARE_INCLUDE_NAPT66=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_XUPNPD=y/CONFIG_FIRMWARE_INCLUDE_XUPNPD=n/g' .config
         sed -i 's/#define DEF_LAN_ADDR		"192.168.2.1"/#define DEF_LAN_ADDR		"192.168.1.1"/g' user/shared/defaults.h
         sed -i 's/#define DEF_LAN_DHCP_BEG	"192.168.2.100"/#define DEF_LAN_DHCP_BEG	"192.168.1.100"/g' user/shared/defaults.h
         sed -i 's/#define DEF_LAN_DHCP_END	"192.168.2.244"/#define DEF_LAN_DHCP_END	"192.168.1.254"/g' user/shared/defaults.h
